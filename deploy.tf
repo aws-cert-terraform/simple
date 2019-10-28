@@ -32,6 +32,6 @@ resource "digitalocean_droplet" "web-app" {
     }
 }
 
-output "cluster-private-ips" {
+output "cluster-public-ips" {
   value = "${formatlist("%v", digitalocean_droplet.web-app.ipv4_address)}"
 }

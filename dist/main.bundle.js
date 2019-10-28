@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "636b3c3696cbfe98cddf";
+/******/ 	var hotCurrentHash = "db4521dc8a0f71dcd878";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -873,7 +873,7 @@ var styles = function styles(theme) {
     },
     paper: {
       margin: "auto",
-      padding: theme.spacing.unit * 2,
+      padding: theme.spacing(2),
       textAlign: 'flex-start',
       color: theme.palette.text.secondary
     },
@@ -915,7 +915,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var classes = this.props.classes;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_6__["Paper"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_6__["default"], {
         className: classes.paper
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], null, "Validate Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Input__WEBPACK_IMPORTED_MODULE_4__["default"], {
         placeholder: "Validation code",
@@ -927,7 +927,7 @@ function (_React$Component) {
           'aria-label': 'Description'
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        variant: "raised",
+        variant: "contained",
         className: classes.button,
         onClick: this.props.registerFunction
       }, "Register User"));
@@ -1001,7 +1001,7 @@ var styles = function styles(theme) {
     },
     paper: {
       margin: "auto",
-      padding: theme.spacing.unit * 2,
+      padding: theme.spacing(2),
       textAlign: 'flex-start',
       color: theme.palette.text.secondary
     },
@@ -1061,7 +1061,7 @@ function Login(props) {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__["default"], {
     fullWidth: true,
     type: "submit",
-    variant: "raised",
+    variant: "contained",
     className: classes.button,
     onClick: props.authenticateUser
   }, "Login User"), props.login_error ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], null, props.login_error.code) : null));
@@ -1127,7 +1127,7 @@ var styles = function styles(theme) {
     },
     paper: {
       margin: "auto",
-      padding: theme.spacing.unit * 2,
+      padding: theme.spacing(2),
       textAlign: 'flex-start',
       color: theme.palette.text.secondary
     },
@@ -1201,7 +1201,7 @@ function Signup(props) {
       'aria-label': 'Description'
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    variant: "raised",
+    variant: "contained",
     className: classes.button,
     onClick: props.signUpUser
   }, "Register User"), props.signup_error ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], null, props.signup_error.code) : null);
@@ -1348,7 +1348,8 @@ var styles = {
   navbar: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
     marginBottom: "100px",
-    shadows: "none"
+    shadows: "none",
+    fontFamily: "Roboto Slab"
   },
   menuButton: {
     marginLeft: -12,
@@ -1362,7 +1363,7 @@ function NavBar(props) {
     className: classes.navbar,
     position: "fixed"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_4__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    variant: "title",
+    variant: "h5",
     color: "inherit",
     className: classes.flex
   }, "Liberty Radio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -1628,7 +1629,7 @@ function (_React$Component) {
         alignContent: "center",
         justify: "center",
         className: classes.page_root,
-        spacing: 16
+        spacing: 10
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3__["default"], {
         item: true,
         xs: 12,
@@ -1808,18 +1809,19 @@ function (_React$Component) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _context2.next = 2;
+                console.log("on page " + this.state.page);
+                _context2.next = 3;
                 return Object(_data_tracks__WEBPACK_IMPORTED_MODULE_7__["getTracks"])(this.state.page + 1);
 
-              case 2:
+              case 3:
                 moreTracks = _context2.sent;
                 copy = this.state.tracks.concat(moreTracks.tracks);
                 this.setState({
-                  page: this.state.page++,
+                  page: this.state.page + 1,
                   tracks: copy
                 });
 
-              case 5:
+              case 6:
               case "end":
                 return _context2.stop();
             }
@@ -1988,12 +1990,12 @@ var styles = function styles(theme) {
       fontSize: "9vw"
     }), _defineProperty(_title, "fontFamily", "Roboto Slab"), _title),
     padded: {
-      padding: theme.spacing.unit * 2,
+      padding: theme.spacing(2),
       marginBottom: "14px",
       fontFamily: "Roboto Slab"
     },
     hide: {
-      padding: theme.spacing.unit * 2,
+      padding: theme.spacing(2),
       marginBottom: 10
     },
     button: {
@@ -2021,31 +2023,10 @@ function TopLeft(props) {
     className: classes.padded
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__["default"], {
     className: classes.mainTitle,
-    variant: "display1",
+    variant: "h1",
     gutterBottom: true
   }, "Liberty Radio")));
-} // function Basic(props) {
-//   const { classes } = props;
-//   return (
-//     <Paper>
-//       <div className={classes.padded}>
-//         <Typography 
-//           className={classes.title}
-//           variant="headline" 
-//           gutterBottom>
-//             Some kind of message!
-//         </Typography>
-//         <Typography 
-//           className={classes.formTitle}
-//           variant="caption" 
-//           gutterBottom>
-//             Bootylicious, Facewreck, Additional Generic Weed Variety
-//         </Typography>
-//       </div>
-//     </Paper>
-//   )
-// };
-
+}
 
 function PlaylistLink(props) {
   var classes = props.classes;
@@ -2082,21 +2063,9 @@ function TrackList(props) {
 
 function determineMsg(i, obj) {
   var returnObj;
-
-  if (i == 4) {
-    returnObj = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ui_message__WEBPACK_IMPORTED_MODULE_11__["MessageComponent"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_track__WEBPACK_IMPORTED_MODULE_10__["default"], {
-      track: obj
-    }));
-  } else if (i == 7) {
-    returnObj = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ui_message__WEBPACK_IMPORTED_MODULE_11__["MessageTwoComponent"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_track__WEBPACK_IMPORTED_MODULE_10__["default"], {
-      track: obj
-    }));
-  } else {
-    returnObj = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_track__WEBPACK_IMPORTED_MODULE_10__["default"], {
-      track: obj
-    });
-  }
-
+  returnObj = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_track__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    track: obj
+  });
   return returnObj;
 }
 
@@ -2122,14 +2091,12 @@ var ImageTestComponent = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODUL
 /*!***************************************!*\
   !*** ./app/components/ui/message.jsx ***!
   \***************************************/
-/*! exports provided: CalloutComponent, MessageComponent, MessageTwoComponent */
+/*! exports provided: CalloutComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CalloutComponent", function() { return CalloutComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MessageComponent", function() { return MessageComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MessageTwoComponent", function() { return MessageTwoComponent; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
@@ -2183,7 +2150,7 @@ var styles = function styles(theme) {
       flexDirection: 'row'
     },
     padded: {
-      padding: theme.spacing.unit * 2,
+      padding: theme.spacing(2),
       marginBottom: "14px",
       fontFamily: "Roboto Slab"
     },
@@ -2216,8 +2183,8 @@ function Callout(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_6__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classes.padded
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    variant: "headline"
-  }, "Now Playing @Liberty"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    variant: "h5"
+  }, "Now Playing @Liberty"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__["default"], {
     variant: "caption",
     style: {
       marginBottom: 10
@@ -2225,61 +2192,10 @@ function Callout(props) {
   }, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan orci vitae ornare varius. Proin placerat felis id eros scelerisque, eget tincidunt augue mattis.")));
 }
 
-function Message(props) {
-  var classes = props.classes;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Card__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    className: classes.card
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: classes.details
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    className: classes.content
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    variant: "headline",
-    className: classes.header
-  }, "Tinctures"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    variant: "subheading",
-    className: classes.sub_header
-  }, "Ethanol based tinctures, now at Liberty"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_CardMedia__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    className: classes.cover,
-    image: 'https://cdn.shopify.com/s/files/1/2225/9555/products/Serenity_Tincture_Main_Image_1c088b72-461e-47f0-aaf8-a2d1db38062b.png?v=1512919209'
-  }));
-}
-
-;
-
-function MessageTwo(props) {
-  var classes = props.classes;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Card__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    className: classes.card
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: classes.details
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    className: classes.content
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    variant: "headline",
-    className: classes.header
-  }, "CDB Oil now available"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    variant: "subheading",
-    className: classes.sub_header
-  }, "Other messaging"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_CardMedia__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    className: classes.cover,
-    image: 'https://stickyguide.imgix.net/product_photos/224228/original-1523035942.JPG?auto=format&fm=jpg&q=85&w=1000&h=1000'
-  }));
-}
-
-;
 Callout.propTypes = {
   classes: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired
 };
-Message.propTypes = {
-  classes: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired
-};
-MessageTwo.propTypes = {
-  classes: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired
-};
 var CalloutComponent = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__["withStyles"])(styles)(Callout);
-var MessageComponent = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__["withStyles"])(styles)(Message);
-var MessageTwoComponent = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__["withStyles"])(styles)(MessageTwo);
 
 
 /***/ }),
@@ -2346,12 +2262,12 @@ var styles = function styles(theme) {
     header: (_header = {
       fontFamily: "Roboto Slab"
     }, _defineProperty(_header, theme.breakpoints.down('xl'), {
-      fontSize: "2vw"
+      fontSize: "3vw"
     }), _defineProperty(_header, theme.breakpoints.down('md'), {
       fontSize: "3.5vw"
     }), _header),
     sub_header: (_sub_header = {
-      fontFamily: "Roboto Slab"
+      fontFamily: "Raleway"
     }, _defineProperty(_sub_header, theme.breakpoints.down('xl'), {
       fontSize: "1.5vw"
     }), _defineProperty(_sub_header, theme.breakpoints.down('md'), {
@@ -2375,10 +2291,10 @@ function Track(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_6__["default"], {
     className: classes.content
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    variant: "headline",
+    variant: "h2",
     className: classes.header
   }, props.track.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    variant: "subheading",
+    variant: "subtitle2",
     className: classes.sub_header
   }, props.track.artist_name)))));
 }
@@ -28435,7 +28351,7 @@ module.exports = function sha256(buf) {
 var escape = __webpack_require__(/*! ../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Bungee+Shade|Roboto+Slab|Pacifico);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Bungee+Shade|Roboto+Slab|Pacifico|Raleway);", ""]);
 
 // module
 exports.push([module.i, "/* @import url('https://fonts.googleapis.com/css?family=Pacifico'); */\nbody {\n  margin: 0;\n  position: relative;\n  background: linear-gradient(0deg, rgba(192, 212, 13, 0.3), rgba(255, 0, 150, 0.3)), url(" + escape(__webpack_require__(/*! ../assets/funky-lines.png */ "./app/assets/funky-lines.png")) + ");\n  background-attachment: fixed; }\n", ""]);
